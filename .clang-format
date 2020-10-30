@@ -1,0 +1,205 @@
+---
+# Chosen Options -v-1
+#----------------
+
+#   Completely thought out and formatted -v-2
+#  --------------------------------------
+Language: Cpp
+
+#     Classes & Structs -v-3
+#    -------------------
+
+AccessModifierOffset: -4  # This assumes that indentation is 4!
+
+#       Constructors / Destructors -v-4
+#      ----------------------------
+
+AllowAllConstructorInitializersOnNextLine: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+#     Indentation -v-3
+#    -------------
+
+ContinuationIndentWidth: 2 #TODO mull
+
+ConstructorInitializerIndentWidth: 2 #TODO mull
+
+#     Breaks -v-3
+#    --------
+
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: AfterColon
+
+#       Braces -v-4
+#      --------
+
+BreakBeforeBraces: Custom # Required for BraceWrapping options
+BraceWrapping:                                                    #-v-5
+  AfterClass: true                                                  #-v-6
+  AfterStruct: true
+  AfterFunction: true
+  # -----
+  AfterCaseLabel: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterNamespace: false
+  AfterUnion: false
+
+  BeforeLambdaBody: true                                            #-v-6
+  # -----
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeWhile: false
+
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: true
+                                                                    #-v-6
+  #SplitEmptyNamespace: ?  # n/a (AfterNamespace: false)
+  #AfterExternBlock: ?     # Bad Documentation
+                                                                  #-^-5
+
+#   Selected options (not sorted) -v-2
+#  -------------------------------
+
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: false
+AlignConsecutiveMacros: false
+AlignEscapedNewlines: Left
+AllowAllArgumentsOnNextLine: true  # Would prefer a "force" option, maybe
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: true
+BinPackParameters: false
+ColumnLimit: 100 #TODO mull
+Cpp11BracedListStyle: true
+DeriveLineEnding: false # Don't ever "derive" anything
+DerivePointerAlignment: false # Don't ever "derive" anything
+ExperimentalAutoDetectBinPacking: true #NOTE: might go away. TODO  Do other settings interfere?
+FixNamespaceComments: true
+IncludeBlocks: Preserve # TODO Consider using Regroup (mull)
+#IncludeCategories: # This is for use with IncludeBlocks: Regroup
+#  - Regex: ?
+#    Priority: ?
+#    SortPriority: ?
+
+#   Firmly Against Even Being A Consideration -v-2
+#  -------------------------------------------
+
+#CompactNamespaces: ?  # irrelevant, old C++
+#DisableFormat: ?
+#ForEachMacros:
+
+#   To Mull Over -v-2
+#  --------------
+
+# NOTE: also see '\v\c#.*<TODO>.+<mull>'
+
+AlignOperands: DontAlign # I think? Goes with ContinuationIndentWidth (?)
+AlignTrailingComments: true
+AlwaysBreakAfterReturnType: AllDefinitions
+BreakStringLiterals: false
+CommentPragmas: "^/" # Doxygen C++ style comments (3 slashes)
+
+# Not yet evaluated -v-1
+#-------------------
+
+#IncludeIsMainRegex: ?
+#IncludeIsMainSourceRegex: ?
+#IndentCaseBlocks: ?
+#IndentCaseLabels: ?
+#IndentExternBlock: ?
+#IndentGotoLabels: ?
+#IndentPPDirectives: ?
+#IndentWidth: ?
+#IndentWrappedFunctionNames: ?
+#InsertTrailingCommas: ?
+#JavaScriptQuotes: ?
+#JavaScriptWrapImports: ?
+#KeepEmptyLinesAtTheStartOfBlocks: ?
+#MacroBlockBegin: ?
+#MacroBlockEnd: ?
+#MaxEmptyLinesToKeep: ?
+#NamespaceIndentation: ?
+#ObjCBinPackProtocolList: ?
+#ObjCBlockIndentWidth: ?
+#ObjCBreakBeforeNestedBlockParam: ?
+#ObjCSpaceAfterProperty: ?
+#ObjCSpaceBeforeProtocolList: ?
+#PenaltyBreakAssignment: ?
+#PenaltyBreakBeforeFirstCallParameter: ?
+#PenaltyBreakComment: ?
+#PenaltyBreakFirstLessLess: ?
+#PenaltyBreakString: ?
+#PenaltyBreakTemplateDeclaration: ?
+#PenaltyExcessCharacter: ?
+#PenaltyReturnTypeOnItsOwnLine: ?
+#PointerAlignment: ?
+#ReflowComments: ?
+#SortIncludes: ?
+#SortUsingDeclarations: ?
+#SpaceAfterCStyleCast: ?
+#SpaceAfterLogicalNot: ?
+#SpaceAfterTemplateKeyword: ?
+#SpaceBeforeAssignmentOperators: ?
+#SpaceBeforeCpp11BracedList: ?
+#SpaceBeforeCtorInitializerColon: ?
+#SpaceBeforeInheritanceColon: ?
+#SpaceBeforeParens: ?
+#SpaceBeforeRangeBasedForLoopColon: ?
+#SpaceBeforeSquareBrackets: ?
+#SpaceInEmptyBlock: ?
+#SpaceInEmptyParentheses: ?
+#SpacesBeforeTrailingComments: ?
+#SpacesInAngles: ?
+#SpacesInCStyleCastParentheses: ?
+#SpacesInConditionalStatement: ?
+#SpacesInContainerLiterals: ?
+#SpacesInParentheses: ?
+#SpacesInSquareBrackets: ?
+#Standard: ?
+#StatementMacros:
+#TabWidth: ?
+#UseCRLF: ?
+#UseTab: ?
+#WhitespaceSensitiveMacros:
+
+# Weird -v-1
+#------------
+
+#   Not mentioned in the documentation -v-2
+#  ------------------------------------
+
+#BreakBeforeInheritanceComma: ?
+#BreakConstructorInitializersBeforeComma: ?
+
+#   ‽‽‽ -v-2
+#  -----
+
+#AlignConsecutiveBitFields: ?
+
+#   Deprecated -v-2
+#  ------------
+
+#AlwaysBreakAfterDefinitionReturnType: ?
+
+# Notes -v-1
+#-------
+
+# https://releases.llvm.org/11.0.0/tools/clang/docs/ClangFormatStyleOptions.html
+
+#-^-1
+
+# vim: set et ts=2 sw=0 sts=0 ft=yaml fdm=marker fmr=-v-,-^- :
+...
