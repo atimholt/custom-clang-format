@@ -9,20 +9,20 @@ Language: Cpp
 #     Classes & Structs -v-3
 #    -------------------
 
-AccessModifierOffset: -4  # This assumes that indentation is 4!
+AccessModifierOffset: -3  # This assumes that indentation is 4!
 
 #       Constructors / Destructors -v-4
 #      ----------------------------
 
 AllowAllConstructorInitializersOnNextLine: true
-ConstructorInitializerAllOnOneLineOrOnePerLine: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
 
 #     Indentation -v-3
 #    -------------
 
-ContinuationIndentWidth: 2 #TODO mull
+ContinuationIndentWidth: 4
 
-ConstructorInitializerIndentWidth: 2 #TODO mull
+ConstructorInitializerIndentWidth: 4
 
 #     Breaks -v-3
 #    --------
@@ -30,7 +30,7 @@ ConstructorInitializerIndentWidth: 2 #TODO mull
 BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: BeforeComma
-BreakInheritanceList: AfterColon
+BreakInheritanceList: BeforeComma
 
 #       Braces -v-4
 #      --------
@@ -54,7 +54,7 @@ BraceWrapping:                                                    #-v-5
   BeforeWhile: false
 
   IndentBraces: false
-  SplitEmptyFunction: false
+  SplitEmptyFunction: true
   SplitEmptyRecord: true
                                                                     #-v-6
   #SplitEmptyNamespace: ?  # n/a (AfterNamespace: false)
@@ -64,14 +64,14 @@ BraceWrapping:                                                    #-v-5
 #   Selected options (not sorted) -v-2
 #  -------------------------------
 
-AlignAfterOpenBracket: AlwaysBreak
-AlignConsecutiveAssignments: true
+AlignAfterOpenBracket: DontAlign
+AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
 AlignConsecutiveMacros: false
-AlignEscapedNewlines: Left
+AlignEscapedNewlines: Right
 AllowAllArgumentsOnNextLine: true  # Would prefer a "force" option, maybe
 AllowAllParametersOfDeclarationOnNextLine: true
-AllowShortBlocksOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortEnumsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: InlineOnly
@@ -82,13 +82,27 @@ AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: true
 BinPackParameters: false
-ColumnLimit: 100 #TODO mull
+ColumnLimit: 80
 Cpp11BracedListStyle: true
 DeriveLineEnding: false # Don't ever "derive" anything
 DerivePointerAlignment: false # Don't ever "derive" anything
 ExperimentalAutoDetectBinPacking: true #NOTE: might go away. TODO  Do other settings interfere?
 FixNamespaceComments: true
 IncludeBlocks: Preserve # TODO Consider using Regroup (mull)
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: Inner
+PointerAlignment: Left
+SpaceAfterTemplateKeyword: false
+Standard: c++20
+TabWidth: 4
+IndentWidth: 4
+UseTab: AllignWithSpaces # Is this right?
+IndentCaseBlocks: false
+IndentCaseLabels: false
+IndentWrappedFunctionNames: false
+IndentPPDirectives: BeforeHash
+ReflowComments: true
 #IncludeCategories: # This is for use with IncludeBlocks: Regroup
 #  - Regex: ?
 #    Priority: ?
@@ -106,37 +120,24 @@ IncludeBlocks: Preserve # TODO Consider using Regroup (mull)
 
 # NOTE: also see '\v\c#.*<TODO>.+<mull>'
 
-AlignOperands: DontAlign # I think? Goes with ContinuationIndentWidth (?)
+AlignOperands: Align # Set to Align in bespoke irrlicht examples (or earlier)
 AlignTrailingComments: true
 AlwaysBreakAfterReturnType: AllDefinitions
 BreakStringLiterals: false
-CommentPragmas: "^/" # Doxygen C++ style comments (3 slashes)
+#CommentPragmas: "^/" # Doxygen C++ style comments (3 slashes)
 
 # Not yet evaluated -v-1
 #-------------------
 
 #IncludeIsMainRegex: ?
 #IncludeIsMainSourceRegex: ?
-#IndentCaseBlocks: ?
-#IndentCaseLabels: ?
 #IndentExternBlock: ?
 #IndentGotoLabels: ?
-#IndentPPDirectives: ?
-#IndentWidth: ?
-#IndentWrappedFunctionNames: ?
 #InsertTrailingCommas: ?
 #JavaScriptQuotes: ?
 #JavaScriptWrapImports: ?
-#KeepEmptyLinesAtTheStartOfBlocks: ?
 #MacroBlockBegin: ?
 #MacroBlockEnd: ?
-#MaxEmptyLinesToKeep: ?
-#NamespaceIndentation: ?
-#ObjCBinPackProtocolList: ?
-#ObjCBlockIndentWidth: ?
-#ObjCBreakBeforeNestedBlockParam: ?
-#ObjCSpaceAfterProperty: ?
-#ObjCSpaceBeforeProtocolList: ?
 #PenaltyBreakAssignment: ?
 #PenaltyBreakBeforeFirstCallParameter: ?
 #PenaltyBreakComment: ?
@@ -145,13 +146,10 @@ CommentPragmas: "^/" # Doxygen C++ style comments (3 slashes)
 #PenaltyBreakTemplateDeclaration: ?
 #PenaltyExcessCharacter: ?
 #PenaltyReturnTypeOnItsOwnLine: ?
-#PointerAlignment: ?
-#ReflowComments: ?
 #SortIncludes: ?
 #SortUsingDeclarations: ?
 #SpaceAfterCStyleCast: ?
 #SpaceAfterLogicalNot: ?
-#SpaceAfterTemplateKeyword: ?
 #SpaceBeforeAssignmentOperators: ?
 #SpaceBeforeCpp11BracedList: ?
 #SpaceBeforeCtorInitializerColon: ?
@@ -168,11 +166,8 @@ CommentPragmas: "^/" # Doxygen C++ style comments (3 slashes)
 #SpacesInContainerLiterals: ?
 #SpacesInParentheses: ?
 #SpacesInSquareBrackets: ?
-#Standard: ?
 #StatementMacros:
-#TabWidth: ?
 #UseCRLF: ?
-#UseTab: ?
 #WhitespaceSensitiveMacros:
 
 # Weird -v-1
