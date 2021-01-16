@@ -55,7 +55,7 @@ BraceWrapping:                                                    #-v-5
 
   IndentBraces: false
   SplitEmptyFunction: true
-  SplitEmptyRecord: true
+  #SplitEmptyRecord: true # doesn't seem to be working, though documented.
                                                                     #-v-6
   #SplitEmptyNamespace: ?  # n/a (AfterNamespace: false)
   #AfterExternBlock: ?     # Bad Documentation
@@ -97,7 +97,7 @@ SpaceAfterTemplateKeyword: false
 Standard: c++20
 TabWidth: 4
 IndentWidth: 4
-UseTab: AllignWithSpaces # Is this right?
+UseTab: AlignWithSpaces # Is this right?
 IndentCaseBlocks: false
 IndentCaseLabels: false
 IndentWrappedFunctionNames: false
