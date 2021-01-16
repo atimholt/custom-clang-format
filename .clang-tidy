@@ -11,13 +11,13 @@ Checks: >-
    -clang-analyzer-optin.*,
    -clang-analyzer-osx.*,
    cppcoreguidelines-*,
-   llvm-namespace-comment,
+   llvm-namespace-comment*,
    misc-*,
    modernize-*,
    performance-*,
    readability-*,
-   -readability-braces-around-statements,
-   -readability-implicit-bool-conversion,
+   -readability-implicit-bool-conversion*,
+   -readability-uppercase-literal-suffix*,
 CheckOptions:
  - { key: readability-identifier-naming.NamespaceCase,           value: lower_case }
  - { key: readability-identifier-naming.ClassCase,               value: CamelCase  }
@@ -31,12 +31,14 @@ CheckOptions:
  - { key: readability-identifier-naming.ProtectedMemberSuffix,   value: _          }
  - { key: readability-identifier-naming.MacroDefinitionCase,     value: UPPER_CASE }
  - { key: readability-identifier-naming.EnumConstantCase,        value: lower_case }
- - { key: readability-identifier-naming.EnumConstantPrefix,      value: k_         }
+ - { key: readability-identifier-naming.EnumConstantPrefix,      value: e_         }
  - { key: readability-identifier-naming.ConstexprVariableCase,   value: lower_case }
  - { key: readability-identifier-naming.ConstexprVariablePrefix, value: k_         }
  - { key: readability-identifier-naming.GlobalConstantCase,      value: lower_case }
  - { key: readability-identifier-naming.GlobalConstantPrefix,    value: k_         }
  - { key: readability-identifier-naming.MemberConstantCase,      value: lower_case }
  - { key: readability-identifier-naming.MemberConstantPrefix,    value: k_         }
+
+ - { key: readability-braces-around-statements.ShortStatementLines, value: 0       }
 
 # vim: set ft=yaml et ts=3 sw=0 sts=0 :
